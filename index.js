@@ -1,5 +1,6 @@
 import express from "express";
-import { PORT } from "./config/envKeys.js";
+import envKeys from "./config/envConfig.js";
+import connectDB from "./config/dbConfig.js";
 
 const app = express();
 
@@ -11,9 +12,9 @@ app.get("/", (request, response) => {
     }
 })
 
-app.listen(PORT, (error) => {
+app.listen(envKeys.PORT, async(error) => {
     
     if(error) return console.log({ error: error.message });
-    
-    console.log(`Server Connected Successfully on http://localhost:${PORT}`);
+    await connectDB();
+    console.log(`Server Connected Successfully on http://localhost:${envKeys.PORT}`);
 });
