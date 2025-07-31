@@ -1,0 +1,25 @@
+{
+  "name": "webchat-backend",
+  "version": "1.0.0",
+  "description": "A webChat application",
+  "homepage": "https://github.com/Thangapandi-K/webChat-Backend#readme",
+  "bugs": {
+    "url": "https://github.com/Thangapandi-K/webChat-Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thangapandi-K/webChat-Backend.git"
+  },
+  "license": "ISC",
+  "author": "Thangapandi K",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
