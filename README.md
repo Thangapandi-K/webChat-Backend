@@ -58,4 +58,9 @@
 - [ ] User - Edit Profile
 - [ ] User - Upload Display Picture
 - [ ] User - Account Verification
+- [ ] User - Account View (Private / Public)
 - [ ] User - Reset Password
+
+
+
+#### updating...
