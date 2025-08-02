@@ -14,8 +14,14 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     displayPicture: {
-        type: String,
-        default: null
+        path: {
+            type: String,
+            default: null
+        },
+        id: {
+            type: String,
+            default: null
+        }
     },
     bio: {
         type: String,

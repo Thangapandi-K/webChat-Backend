@@ -23,7 +23,7 @@
 - [x] jsonwebtoken
 - [x] dotenv
 - [ ] Socket.io (For Real-Time Messages / Notifications)
-- [ ] File Upload (For Display Picture)
+- [x] File Upload (For Display Picture)
 - [ ] Mail Configuration (For Sending OTP / Link)
 
 
@@ -40,7 +40,7 @@
     - [x] Refresh Token - via. Cookies
     - [x] Access Token - via. Headers
 - [x] View User Profile
-- [ ] Edit User Profile
+- [x] Edit User Profile
 - [ ] Verify User Account
     - [ ] Send OTP / Activation Link in Mail
     - [ ] Verify OTP / Activation Link in Mail
@@ -55,8 +55,8 @@
 - [x] User - Register
 - [x] User - Logout
 - [x] User - Profile View
-- [ ] User - Edit Profile
-- [ ] User - Upload Display Picture
+- [x] User - Edit Profile
+- [x] User - Upload Display Picture
 - [ ] User - Account Verification
 - [ ] User - Account View (Private / Public)
 - [ ] User - Reset Password

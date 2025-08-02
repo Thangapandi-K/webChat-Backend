@@ -4,6 +4,8 @@ import cors from "cors";
 import envKeys from "./config/env.config.js";
 import connectDB from "./config/db.config.js";
 import authRouter from "./routes/auth.routes.js";
+import userRouter from "./routes/user.routes.js";
+import requestLogger from "./middlewares/request.logger.js";
 
 const app = express();
 app.use(express.json());
@@ -12,6 +14,8 @@ app.use(cors({
     origin: "http://localhost:5173",
     credentials: true
 }));
+
+app.use(requestLogger)
 
 app.get("/", (request, response) => {
     try {
@@ -22,6 +26,7 @@ app.get("/", (request, response) => {
 });
 
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/user", userRouter);
 
 app.listen(envKeys.PORT, async(error) => {
     

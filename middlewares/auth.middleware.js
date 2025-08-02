@@ -7,21 +7,18 @@ const isAuth = {
             // get token from headers
             const accessToken = request.headers.authorization;
             if (!accessToken) {
-                return response.status(401).json({ success: false, message: "Access Denied"});
+                return response.status(401).json({ success: false, message: "Access Denied ! Login Again !"});
             };
             try {
                 // check the token
-                const isTokenValid = await jwtToken.verifyAccessToken(accessToken);
-                if (!isTokenValid) {
-                    return response.status(403).json({ success: false, message: "User Not Authorized !"});
-                };
+                const decodedToken = await jwtToken.verifyAccessToken(accessToken);
                 // set user id in request
-                request.userId = isTokenValid.id;
+                request.userId = decodedToken.id;
                 // proceed to next
                 next();
 
             } catch (error) {
-                return response.status(401).json({ success: false, message: "Access Denied !"});
+                return response.status(403).json({ success: false, message: "Access Denied !"});
             };            
         } catch (error) {
             return response.status(500).json({ success: false, message: error.message });

@@ -25,9 +25,9 @@ const authController = {
                 password: hashedPassword
             });
             // success response
-            return response.status(200).json({ success: true, message: "User registered successfully !"});
+            return response.status(201).json({ success: true, message: "User registered successfully !"});
         } catch (error) {
-            return response.status(200).json({ success: false, message: error.message });
+            return response.status(500).json({ success: false, message: error.message });
         }
     },
     // login user
